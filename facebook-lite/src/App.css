@@ -25,7 +25,8 @@
 }
 #profile{
   display :  inline-block;
-  margin: 40%;
+  margin-left: 40%;
+  margin-right:40%; 
   text-align: center;
   justify-content: center;
   background-color: #282c34;
