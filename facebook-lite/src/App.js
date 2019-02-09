@@ -49,8 +49,11 @@ class Profile extends React.Component{
       <div>
         <img class="profile" src={this.props.profile} />
         <br/>
-        <h1>{this.props.prenom}<br/>{this.props.nom}<br/>{this.props.date}</h1>
+        <div id ="profile">
+          <h1>{this.props.prenom}<br/>{this.props.nom}<br/>{this.props.date}</h1>
+        </div>
         <h3>{this.props.comm}</h3>
+        
       </div>
     )
   }

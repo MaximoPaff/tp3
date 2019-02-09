@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -21,7 +23,13 @@
 .App-link {
   color: #61dafb;
 }
-
+#profile{
+  display :  inline-block;
+  margin: 40%;
+  text-align: center;
+  justify-content: center;
+  background-color: #282c34;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
