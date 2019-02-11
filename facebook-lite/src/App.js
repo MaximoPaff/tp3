@@ -11,10 +11,10 @@ class App extends Component {
      date:'29/99/1999',
      comm:'Ca va être tout noir', 
      image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9bxjpTxAhwfVG25XpSHNTbYfi01lOBHv6Pd59zdUr1GPMiZdB',
-     bgcolor:' #204ba0'
+     bgcolor:'#204ba0'
    }
  }
- Clique = (e)=>{
+ Click = (e)=>{
     switch (this.state.bgcolor){
     case '#204ba0': 
       this.setState({bgcolor:'red'});
@@ -23,13 +23,12 @@ class App extends Component {
       this.setState({bgcolor:'green'});
       break;
     case 'green' :
-    this.setState({bgcolor:'#204ba0'});
-    break;
+      this.setState({bgcolor:'#204ba0'});
+      break;
     case 'default' :
-    this.setState({bgcolor:'yellow'});
-    break;
-
- }
+      this.setState({bgcolor:'yellow'});
+      break;
+  }
 }
   render() {
     return (
@@ -60,10 +59,18 @@ class App extends Component {
         >
           Claude
           </button>
+          <br/> <br/>
+          <button 
+      type='button'
+      id='bouton'
+      onClick={this.Click}>
+      Changement de Style
+      </button>
           </header>
       <Profile prenom ={this.state.prenom} nom={this.state.nom} date={this.state.date} comm={this.state.comm} image={this.state.image} bgcolor={this.state.bgcolor}/>
       
       </div>
+      
     );
   }
 }
@@ -72,30 +79,23 @@ class Profile extends React.Component{
   render()
   {
     return( 
-      <div>
-        
-        <br/>
-          <div id ="profile" style={{background: this.props.bgcolor}} >
+     
+        <div>
+          <br/>
+           <div id ="profile" style={{background: this.props.bgcolor}} >
             <img src={this.props.image}/>
               <h1>{this.props.prenom}<br/>{this.props.nom}<br/></h1>
               <h3>{this.props.date}</h3>
-              <button 
-              type='button'
-              id='bouton'
-              onClick={this.Clique}>
-              Changement de Style
-              </button>
+              
           </div>
-          <div id ="profile">
+          <div id ="profile" style={{background: this.props.bgcolor}}>
         <h3>{this.props.comm}</h3>
         <button
         type='button'
         id='bouton'>C'est Impeccable !
-        
-
         </button>
         </div>
-      </div>
+        </div>
     )
   }
 }
